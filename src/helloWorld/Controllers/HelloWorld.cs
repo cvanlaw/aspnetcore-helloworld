@@ -2,6 +2,7 @@
 
 namespace helloWorld.Controllers
 {
+    [ApiController]
     [Route("api/[controller]")]
     public class HelloWorld : Controller
     {
