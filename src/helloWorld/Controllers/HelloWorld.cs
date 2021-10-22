@@ -8,13 +8,18 @@ namespace helloWorld.Controllers
     {
         // GET api/helloworld
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult Get(string name = null)
         {
+            if(string.IsNullOrWhiteSpace(name))
+            {
+                name = "World";
+            }
+            
             var result = new
             {
                 Data = new
                 {
-                    Message = "Hello, World!"
+                    Message = $"Hello, {name}!"
                 }
             };
 
